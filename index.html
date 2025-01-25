@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS FlexBox - 5</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <style>
+      .img-res {
+        width: 100%;
+        height: auto;
+      }
+      nav ul {
+        display: flex;
+        height: 60px;
+        align-items: center;
+      }
+      nav ul li {
+        margin-right: 15px;
+        font-size: 16px;
+      }
+      header {
+        display: flex;
+        max-height: 700px;
+        position: relative;
+      }
+      header h1 {
+        position: absolute;
+        align-self: center;
+        background-color: rgba(255, 255, 255, 0.3);
+        margin-right: 30px;
+      }
+      .container {
+        display: flex;
+        max-width: 1200px;
+        margin: 50px auto;
+      }
+      .container aside {
+        flex: 25%;
+      }
+      .container main {
+        flex: 75%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .container main > div {
+        flex: 50%;
+        width: 50%;
+        /* flex-basis: 200px; */
+        /* margin: 0 15px; */
+        padding: 0 15px;
+        margin-bottom: 15px;
+      }
+      .container main div p {
+        font-size: 16px;
+      }
+      aside > div {
+        background-color: #efefef;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+      aside div p {
+        border-bottom: 1px solid rgb(224, 224, 224);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+      footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        color: #fff;
+
+      }
+      @media screen and (max-width:978px){   
+        .container{
+          flex-direction: column;
+        }
+        .container main > div{
+          flex: 100%;
+          width:100%
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav class="gray">
+      <ul>
+        <li><a href="">خانه</a></li>
+        <li><a href="">دوره های آموزشی</a></li>
+        <li><a href="">درباره ما</a></li>
+        <li><a href="">تماس با ما</a></li>
+      </ul>
+    </nav>
+    <header class="black">
+      <h1>کسب مهارت و شروع تجربه های تازه</h1>
+      <img class="img-res" src="../assets/img/bg.jpg" alt="" />
+    </header>
+    <section class="container">
+      <aside>
+        <div>
+          <p>جدیدترین مطالب</p>
+          <lu>
+            <li><a href="">مطلب 1</a></li>
+            <li><a href="">مطالب 2</a></li>
+            <li><a href="">مطالب 3</a></li>
+            <li><a href="">مطالب 4</a></li>
+            <li><a href="">مطالب 5</a></li>
+          </lu>
+        </div>
+        <div>
+          <p>محبوب ترین مطالب</p>
+          <lu>
+            <li><a href="">مطلب 1</a></li>
+            <li><a href="">مطالب 2</a></li>
+            <li><a href="">مطالب 3</a></li>
+            <li><a href="">مطالب 4</a></li>
+            <li><a href="">مطالب 5</a></li>
+          </lu>
+        </div>
+        <div>
+          <p>جدیدترین مطالب</p>
+          <lu>
+            <li><a href="">مطلب 1</a></li>
+            <li><a href="">مطالب 2</a></li>
+            <li><a href="">مطالب 3</a></li>
+            <li><a href="">مطالب 4</a></li>
+            <li><a href="">مطالب 5</a></li>
+          </lu>
+        </div>
+      </aside>
+      <main>
+        <div>
+          <img class="img-res" src="../assets/img/frontend.jpg" alt="" />
+          <p>دوره طراحی وب</p>
+        </div>
+        <div>
+          <img class="img-res" src="../assets/img/php.jpg" alt="" />
+          <p>دوره PHP</p>
+        </div>
+        <div>
+          <img class="img-res" src="../assets/img/android.jpg" alt="" />
+          <p>دوره اندرویید</p>
+        </div>
+        <div>
+          <img class="img-res" src="../assets/img/frontend.jpg" alt="" />
+          <p>دوره طراحی وب</p>
+        </div>
+        <div>
+          <img class="img-res" src="../assets/img/php.jpg" alt="" />
+          <p>دوره PHP</p>
+        </div>
+        <div>
+          <img class="img-res" src="../assets/img/android.jpg" alt="" />
+          <p>دوره اندرویید</p>
+        </div>
+      </main>
+    </section>
+    <footer class="purple">
+      <p>تمامی حقوق محفوظ می باشد</p>
+    </footer>
+  </body>
+</html>
